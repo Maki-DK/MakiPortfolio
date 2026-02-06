@@ -25,12 +25,12 @@ const links = document.querySelectorAll('.link-btn');
 links.forEach(link => {
     link.addEventListener('mouseenter', () => {
         cursor.style.transform = 'scale(2)';
-        cursor.style.background = '#00d4ff';
+        cursor.style.background = '#6caced';
     });
     
     link.addEventListener('mouseleave', () => {
         cursor.style.transform = 'scale(1)';
-        cursor.style.background = '#00ff41';
+        cursor.style.background = '#3498db';
     });
 });
 
@@ -38,12 +38,12 @@ const cards = document.querySelectorAll('.card');
 cards.forEach(card => {
     card.addEventListener('mouseenter', () => {
         cursor.style.transform = 'scale(1.5)';
-        cursor.style.background = '#00d4ff';
+        cursor.style.background = '#6caced';
     });
     
     card.addEventListener('mouseleave', () => {
         cursor.style.transform = 'scale(1)';
-        cursor.style.background = '#00ff41';
+        cursor.style.background = '#3498db';
     });
 });
 

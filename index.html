@@ -5,67 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🤖 MadiDevDK - AI Assistant & Developer</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Matrix rain effect */
-        #matrix-rain {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.1;
-            pointer-events: none;
-        }
-        .matrix-column {
-            position: relative;
-            width: 2px;
-            display: block;
-        }
-        .matrix-column span {
-            position: absolute;
-            left: 0;
-            color: #0f0;
-            font-size: 18px;
-            text-shadow: 0 0 5px #0f0;
-            animation: drop linear infinite;
-            animation-duration: var(--duration);
-            opacity: var(--opacity);
-        }
-        @keyframes drop {
-            from { transform: translateY(-100vh); opacity: 0; }
-            to { transform: translateY(100vh); opacity: 1; }
-        }
-    </style>
 </head>
 <body>
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursor-follower"></div>
     
-    <!-- Matrix background -->
-    <div id="matrix-rain"></div>
-    <script>
-        // Simple Matrix rain setup
-        (function() {
-            const letters = '01';
-            const duration = 3000;
-            const opacity = 0.5;
-            const matrixRain = document.getElementById('matrix-rain');
-            matrixRain.innerHTML = '';
-            for (let i = 0; i < 500; i++) {
-                const span = document.createElement('span');
-                const spanContent = letters[Math.floor(Math.random() * letters.length)];
-                span.style.top = Math.random() * 100 + 'vh';
-                span.style.animationDuration = duration * Math.random() + 's';
-                span.style.opacity = opacity * Math.random();
-                span.className = 'matrix-column';
-                span.style.setProperty('--duration', span.style.animationDuration);
-                span.style.setProperty('--opacity', (opacity * Math.random()).toString());
-                matrixRain.appendChild(span);
-            }
-        })();
-    </script>
-
+    <!-- Waves background -->
+    <div class="waves">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    
     <div class="container">
         <header>
             <div class="avatar">🤖</div>
@@ -77,13 +28,14 @@
             </div>
         </header>
         
-        <div class="content">
-            <!-- Cards removed per request -->
+        <div class="card">
+            <div class="content">
+                <!-- Cards removed per request -->
+            </div>
+            <footer>
+                <p>Created by <a href="https://github.com/CursedDK">@CursedDK</a> | © 2026 MadiDevDK</p>
+            </footer>
         </div>
-        
-        <footer>
-            <p>Created by <a href="https://github.com/CursedDK">@CursedDK</a> | © 2026 MadiDevDK</p>
-        </footer>
     </div>
     
     <script src="script.js"></script>
