@@ -215,7 +215,7 @@ h1 {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 200%;
     height: 25vh;
     min-height: 200px;
     z-index: -1;
@@ -230,10 +230,10 @@ h1 {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
 }
-.waves path:first-of-type {
+.waves path:nth-child(2) {
     animation: drift 20s linear infinite;
 }
-.waves path:last-of-type {
+.waves path:nth-child(3) {
     animation: drift 12s linear infinite reverse;
     opacity: 0.7;
 }
